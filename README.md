@@ -34,4 +34,36 @@ sudo ln -s /opt/gimp/*下载文件名* /bin/gimp
 然后添加到桌面或者启动台的步骤和上面类似,把两个```scrcpy```改为```gimp```,把```Icon```删除或者自己找图片放到```/opt/gimp```目录下,改为相关路径,然后就可以了,但是打开的时候可能会有点慢  
 
 ---
+如何配置c++开发环境?  
+```bash
+sudo apt install build-essential g++
+sudo snap install code --classic
+```
+然后可以编写一个C++程序验证以下
+```cpp
+#include <iostream>  // 引入输入输出流库
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;  // 输出 Hello, World!
+    return 0;  // 返回 0 表示程序正常结束
+}
+```
+然后在终端当前目录下运行  
+```bash
+g++ main.cpp -o main
+./main
+```
+如果输出为
+```bash
+Hello,World!
+```
+则表示配置成功
+
+---
+如何配置qt开发环境?  
+```bash
+sudo apt install qtcreator qt5-default build-essential
+```
+
+---
 许多软件的问题可能都是因为系统版本与软件版本不匹配,可以到官网下载最新版本安装就可以了
