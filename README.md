@@ -1,11 +1,11 @@
 # alienware  
 ## Ubuntu  
 ### Ubuntu25.04中可能会有许多问题一次解答一下:  
-1.[Steam++](https://steampp.net),无法正常加速?  
+[Steam++](https://steampp.net),无法正常加速?  
 在加速模式里面选择```system```模式  
 
 ---
-2.scrcpy无法使用?  
+crcpy无法使用?  
 终端运行以下代码将将其卸载  
 ```bash
 sudo apt remove --purge scrcpy
@@ -26,7 +26,7 @@ sudo chmod +x scrcpy.desktop
 ```
 
 ---
-3.gimp无法切换中文,到[官网](https://www.gimp.org/downloads/),点击Applmage的那个,然后下载到/opt/gimp/目录中,然后运行  
+gimp无法切换中文,到[官网](https://www.gimp.org/downloads/),点击Applmage的那个,然后下载到/opt/gimp/目录中,然后运行  
 ```bash
 sudo chmod +x *下载文件名*
 sudo ln -s /opt/gimp/*下载文件名* /bin/gimp
@@ -64,6 +64,19 @@ Hello,World!
 ```bash
 sudo apt install qtcreator qt5-default build-essential
 ```
+---
+AppImage文件无法正常使用  
+可以尝试在运行文件时候加上```--appimage-extract```来解压文件  
+检查依赖  
+```bash
+sudo apt install libfuse2
+```
+然后调整权限  
+```bash
+sudo chown root:root /home/alienware/squashfs-root/usr/share/cursor/chrome-sandbox
+sudo chmod 4755 /home/alienware/squashfs-root/usr/share/cursor/chrome-sandbox
+```
+然后重新运行就可以了  
 
 ---
 许多软件的问题可能都是因为系统版本与软件版本不匹配,可以到官网下载最新版本安装就可以了
