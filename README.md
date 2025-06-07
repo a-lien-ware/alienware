@@ -73,8 +73,8 @@ sudo apt install libfuse2
 ```
 然后调整权限  
 ```bash
-sudo chown root:root /home/alienware/squashfs-root/usr/share/cursor/chrome-sandbox
-sudo chmod 4755 /home/alienware/squashfs-root/usr/share/cursor/chrome-sandbox
+sudo chown root:root "追踪或断点陷阱 (核心已转储)报错的路径"
+sudo chmod 4755 "追踪或断点陷阱 (核心已转储)报错的路径"
 ```
 然后重新运行就可以了  
 
